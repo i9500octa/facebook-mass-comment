@@ -1,0 +1,30 @@
+import httplib, urllib 
+from bs4 import BeautifulSoup 
+import os 
+import json
+import time
+
+access_token=EAAEGWmZArZAFsBAD4ZA7cgzCVNHtfrQB6Lb8s54ZATTicBprjNlEHm8m8EDoXxbsWPbapSg2nnvCZCJEo2GwysDrDXZBeurQas7QlbyOjN74ZAg8yfvvcMzYwVOf8od5AJp04dQ3H2AZBDPNmfZAFp1FFHC9MV8bhRgraZBNcOSgFv1OrA9adjKRZBIROTeOECga2wqhZBu41LNU3mGwPJhZCVj26
+# access_token = raw_input(EAAEGWmZArZAFsBAD4ZA7cgzCVNHtfrQB6Lb8s54ZATTicBprjNlEHm8m8EDoXxbsWPbapSg2nnvCZCJEo2GwysDrDXZBeurQas7QlbyOjN74ZAg8yfvvcMzYwVOf8od5AJp04dQ3H2AZBDPNmfZAFp1FFHC9MV8bhRgraZBNcOSgFv1OrA9adjKRZBIROTeOECga2wqhZBu41LNU3mGwPJhZCVj26)
+
+conn = httplib.HTTPSConnection("graph.facebook.com") 
+print 'Please Wait!'
+ 
+def comment(url): 
+    connect = httplib.HTTPSConnection("graph.facebook.com") 
+    connect.request("GET",url) 
+    for x in xrange(100):  
+            
+            print 'commenting %d '% x
+            path ='/'+'2099049600183771'+'/comments'
+            param_data={  'format':'json', 
+                        'message':'<3', 
+                        EAAEGWmZArZAFsBAD4ZA7cgzCVNHtfrQB6Lb8s54ZATTicBprjNlEHm8m8EDoXxbsWPbapSg2nnvCZCJEo2GwysDrDXZBeurQas7QlbyOjN74ZAg8yfvvcMzYwVOf8od5AJp04dQ3H2AZBDPNmfZAFp1FFHC9MV8bhRgraZBNcOSgFv1OrA9adjKRZBIROTeOECga2wqhZBu41LNU3mGwPJhZCVj26:access_token 
+                  } 
+            connect = httplib.HTTPSConnection("graph.facebook.com") 
+            connect.request("POST",path,urllib.urlencode(param_data),{}) 
+            time.sleep(0.09)
+           
+url='/2099049600183771' 
+comment(url) 
+print 'DONE!'
